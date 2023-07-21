@@ -6,7 +6,6 @@ lsp.ensure_installed({
   'clangd',
 })
 
-
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -40,3 +39,25 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+-- fix undefined global "vim"
+require('lspconfig').lua_ls.setup{
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            }
+        }
+    }
+}
+
+-- after setting up via lsp-zero, restore some options I'd rather have
+
+vim.diagnostic.config({
+  virtual_text = true,
+  signs = true,
+  update_in_insert = false,
+  underline = true,
+  severity_sort = false,
+  float = true,
+})

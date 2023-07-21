@@ -32,6 +32,10 @@ return require('packer').startup(function(use)
   use("mbbill/undotree")
   use("tpope/vim-fugitive")
 
+
+  -- CMake
+  use 'Civitasv/cmake-tools.nvim'
+
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
