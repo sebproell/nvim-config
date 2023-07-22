@@ -1,3 +1,6 @@
+-- work around ancient compilers on some configs I am forced to use
+require 'nvim-treesitter.install'.compilers = { "gcc" }
+
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
   ensure_installed = { "c", "cpp", "lua", "vim", "vimdoc", "query" },
@@ -32,3 +35,4 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
