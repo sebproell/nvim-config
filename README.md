@@ -1,14 +1,20 @@
-# Neovim setup
+# My neovim setup
 
-Setup by cloning to ~/.config/nvim/
+Clone repo to ~/.config/nvim/
 
-
-#### Get latest stable release
+#### Get latest stable release of nvim
 
 ```
 wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O - | tar -xz
 echo "Add `pwd`/nvim-linux64/bin to your PATH"
 ```
+
+#### Install [packer](https://github.com/wbthomason/packer.nvim)
+
+```
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+```
+Open nvim and `:so` `lua/sebproell/packer.lua`, then `:PackerSync`, restart, done!
 
 #### Optional: fonts
 
