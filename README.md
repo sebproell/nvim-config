@@ -1,6 +1,14 @@
-### Neovim setup
+# Neovim setup
 
 Setup by cloning to ~/.config/nvim/
+
+
+#### Get latest stable release
+
+```
+wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz -O - | tar -xz
+echo "Add `pwd`/nvim-linux64/bin to your PATH"
+```
 
 #### Optional: fonts
 
