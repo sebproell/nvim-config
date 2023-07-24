@@ -20,10 +20,12 @@ Open nvim and `:so` `lua/sebproell/packer.lua`, then `:PackerSync`, restart, don
 
 On Ubuntu:
 ```
+mkdir -p ~/.fonts
 cd ~/.fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
+fc-cache -f -v
 ```
 
 #### Credits
