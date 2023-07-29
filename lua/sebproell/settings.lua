@@ -27,4 +27,10 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+-- Attempt to auto-format the file before writing
 
+vim.api.nvim_create_autocmd("BufWritePre",
+    {
+        callback = vim.lsp.buf.format,
+    }
+)
