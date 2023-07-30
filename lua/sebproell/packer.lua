@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
         end
     }
 
+    use 'nvim-tree/nvim-web-devicons'
+
+    -- why is this not bundled??
     use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
@@ -41,6 +44,14 @@ return require('packer').startup(function(use)
 
     -- CMake
     use 'Civitasv/cmake-tools.nvim'
+
+    -- Quickfix replacements
+    use 'gabrielpoca/replacer.nvim'
+
+    -- errors and warning in separate buffer
+    use { 'folke/trouble.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 
     -- LSP setup
     use {
