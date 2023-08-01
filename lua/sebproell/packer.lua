@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
 
+    -- Git integration in gutter
+    use("lewis6991/gitsigns.nvim")
 
     -- CMake
     use 'Civitasv/cmake-tools.nvim'
