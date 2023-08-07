@@ -43,6 +43,7 @@ require("cmake-tools").setup {
 vim.keymap.set("n", "<leader>cb", vim.cmd.CMakeBuild)
 vim.keymap.set("n", "<leader>ct", vim.cmd.CMakeSelectBuildTarget)
 vim.keymap.set("n", "<leader>cr", vim.cmd.CMakeRun)
+vim.keymap.set("n", "<leader>cs", vim.cmd.CMakeStop)
 vim.keymap.set("n", "<leader>cp",
     function()
         -- Delete a potential symlink to compile_commands.json
