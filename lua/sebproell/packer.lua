@@ -57,6 +57,7 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    use { 'kylechui/nvim-surround' }
     -- LSP setup
     use {
         'VonHeikemen/lsp-zero.nvim',
