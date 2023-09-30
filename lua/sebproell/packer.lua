@@ -18,6 +18,8 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    use 'theprimeagen/harpoon'
+
     -- themes
     use {
         'folke/tokyonight.nvim', as = 'tokyonight',
@@ -38,8 +40,13 @@ return require('packer').startup(function(use)
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
         end, }
-    -- use("theprimeagen/harpoon")
-    -- use("theprimeagen/refactoring.nvim")
+
+    use {
+        "nvim-treesitter/nvim-treesitter-textobjects",
+        after = "nvim-treesitter",
+        requires = "nvim-treesitter/nvim-treesitter",
+    }
+
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
 
@@ -58,6 +65,12 @@ return require('packer').startup(function(use)
     }
 
     use { 'kylechui/nvim-surround' }
+
+    use {
+        "m4xshen/hardtime.nvim",
+        requires = { 'MunifTanjim/nui.nvim', "nvim-lua/plenary.nvim" }
+    }
+
     -- LSP setup
     use {
         'VonHeikemen/lsp-zero.nvim',
