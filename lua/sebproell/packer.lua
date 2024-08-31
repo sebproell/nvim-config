@@ -64,6 +64,11 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- structure of the current file (for those big legacy codebases)
+    use 'simrat39/symbols-outline.nvim'
+
+    use 'github/copilot.vim'
+
     use { 'kylechui/nvim-surround' }
 
     use {
