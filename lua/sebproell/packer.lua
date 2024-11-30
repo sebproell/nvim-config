@@ -50,6 +50,8 @@ return require('packer').startup(function(use)
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
 
+    use("karb94/neoscroll.nvim")
+
     -- Git integration in gutter
     use("lewis6991/gitsigns.nvim")
 
