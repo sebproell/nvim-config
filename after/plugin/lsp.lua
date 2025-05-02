@@ -65,3 +65,21 @@ vim.diagnostic.config({
     severity_sort = false,
     float = true,
 })
+
+
+require('lspconfig').yamlls.setup {
+  settings = {
+    yaml = {
+      validate = true,
+      -- disable the schema store
+      schemaStore = {
+        enable = false,
+        url = "",
+      },
+      -- manually select schemas
+      schemas = {
+        ['/home/proell/programs/dev/4C/build/debug/4C_schema.json'] = '*.4C.{yml,yaml}',
+      }
+    }
+  }
+}
