@@ -9,13 +9,6 @@ wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.
 echo "Add `pwd`/nvim-linux64/bin to your PATH"
 ```
 
-#### Install [packer](https://github.com/wbthomason/packer.nvim)
-
-```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
-Open nvim and `:so` `lua/sebproell/packer.lua`, then `:PackerSync`, restart, done!
-
 #### Optional: fonts
 
 On Ubuntu:
@@ -27,7 +20,3 @@ unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 fc-cache -f -v
 ```
-
-#### Credits
-
-Initial version heavily inspired by https://github.com/ThePrimeagen/init.lua
